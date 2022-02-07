@@ -13,6 +13,7 @@ import LoadingAnimation from "./anims/loading.json";
 import UsersForm from "./sections/UsersForm";
 import Candidates from "./pages/Candidates";
 import CandidatesForm from "./sections/CandidatesForm";
+import Votes from "./pages/Votes";
 
 function App() {
   const [user, setUser] = useState({});
@@ -61,6 +62,8 @@ function App() {
                 <Route path="/candidates" element={<Candidates />} />
                 <Route path="/candidates/create" element={<CandidatesForm />} />
                 <Route path="/candidates/:id" element={<CandidatesForm />} />
+
+                <Route path="/votes" element={<Votes />} />
               </>
             ) : (
               <Route path="/login" element={<Login />} />

@@ -120,3 +120,10 @@ export const voteCandidate = async (candidates) => {
     return instance.post(`vote`, candidates);
   });
 };
+
+//? Votes
+export const getVotes = async (url = null) => {
+  return await getCSRF().then(() => {
+    return instance.get(url ? url.url : "votes");
+  });
+};

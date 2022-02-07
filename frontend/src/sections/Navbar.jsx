@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { logoutUser } from "../utils/api";
 import { useNavigate } from "react-router-dom";
-import { isMobile } from "react-device-detect";
 import { HiMenuAlt3, HiOutlineX } from "react-icons/hi";
 
 const Navbar = () => {
@@ -58,6 +57,9 @@ const Navbar = () => {
             <Link to="/candidates" name="Candidates">
               Candidates
             </Link>
+            <Link to="/votes" name="Votes">
+              Votes
+            </Link>
             <div
               className="ml-6 px-4 py-2 relative bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl cursor-pointer"
               onClick={() => setMenu(!menu)}
@@ -102,6 +104,9 @@ const Navbar = () => {
               </Link>
               <Link to="/candidates" name="Candidates">
                 Candidates
+              </Link>
+              <Link to="/votes" name="Votes">
+                Votes
               </Link>
               <button
                 onClick={async () => {

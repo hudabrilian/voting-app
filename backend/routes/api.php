@@ -25,6 +25,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/candidatesAll', [CandidateController::class, 'candidates']);
 
+    Route::get('/votes', [VoteController::class, 'index']);
     Route::post('/vote', [VoteController::class, 'store']);
 
     Route::resource('users', UserController::class);
